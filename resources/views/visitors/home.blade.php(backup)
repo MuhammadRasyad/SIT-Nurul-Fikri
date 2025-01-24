@@ -1,0 +1,386 @@
+@extends('visitors.layouts.nav-app')
+
+@section('content')
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            background: #eee;
+            color: #000;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: auto; /* Menjaga proporsi gambar */
+            object-fit: cover;
+        }
+
+        .slide-content {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: white; /* Warna tombol navigasi */
+        }
+
+        .swiper-pagination-bullet {
+            background: white; /* Warna bullet */
+        }
+
+        @media (max-width: 768px) {
+            .swiper-slide {
+                height: 300px; /* Tinggi tetap untuk mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true"
+        space-between="30" centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+        
+        <swiper-slide>
+            <img src="https://via.placeholder.com/1200x600?text=Slide+1" alt="Slide 1">
+            <div class="slide-content">
+                <h2>Judul Slide 1</h2>
+                <p>Deskripsi singkat untuk Slide 1.</p>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <img src="https://via.placeholder.com/1200x600?text=Slide+2" alt="Slide 2">
+            <div class="slide-content">
+                <h2>Judul Slide 2</h2>
+                <p>Deskripsi singkat untuk Slide 2.</p>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <img src="https://via.placeholder.com/1200x600?text=Slide+3" alt="Slide 3">
+            <div class="slide-content">
+                <h2>Judul Slide 3</h2>
+                <p>Deskripsi singkat untuk Slide 3.</p>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <img src="https://via.placeholder.com/1200x600?text=Slide+4" alt="Slide 4">
+            <div class="slide-content">
+                <h2>Judul Slide 4</h2>
+                <p>Deskripsi singkat untuk Slide 4.</p>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <img src="https://via.placeholder.com/1200x600?text=Slide+5" alt="Slide 5">
+            <div class="slide-content">
+                <h2>Judul Slide 5</h2>
+                <p>Deskripsi singkat untuk Slide 5.</p>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <img src="https://via.placeholder.com/1200x600?text=Slide+6" alt="Slide 6">
+            <div class="slide-content">
+                <h2>Judul Slide 6</h2>
+                <p>Deskripsi singkat untuk Slide 6.</p>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <img src="https://via.placeholder.com/1200x600?text=Slide+7" alt="Slide 7">
+            <div class="slide-content">
+                <h2>Judul Slide 7</h2>
+                <p>Deskripsi singkat untuk Slide 7.</p>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <img src="https://via.placeholder.com/1200x600?text=Slide+8" alt="Slide 8">
+            <div class="slide-content">
+                <h2>Judul Slide 8</h2>
+                <p>Deskripsi singkat untuk Slide 8.</p>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <img src="https://via.placeholder.com/1200x600?text=Slide+9" alt="Slide 9">
+            <div class="slide-content">
+                <h2>Judul Slide 9</h2>
+                <p>Deskripsi singkat untuk Slide 9.</p>
+            </div>
+        </swiper-slide>
+
+    </swiper-container>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script>
+        const swiper = document.querySelector('.mySwiper');
+        swiper.initialize();
+    </script>
+
+
+<section class="py-8">
+    <div class="container mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-green-500">Program Sekolah Islami</h2>
+        <div class="grid grid-cols-2 gap-4">
+            <!-- Card 1 -->
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://via.placeholder.com/300x200?text=Program+Tahfidzul+Quran" alt="Program Tahfidzul Quran" class="w-full h-32 object-cover md:h-40">
+                <div class="p-3 md:p-4">
+                    <h3 class="text-sm md:text-lg font-bold mb-1 text-green-500">Program Tahfidzul Quran</h3>
+                    <p class="text-gray-700 text-xs md:text-sm">Menghafal Al-Quran sejak dini dengan bimbingan ustadz/ustadzah berpengalaman.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://via.placeholder.com/300x200?text=Program+Bahasa+Arab" alt="Program Bahasa Arab" class="w-full h-32 object-cover md:h-40">
+                <div class="p-3 md:p-4">
+                    <h3 class="text-sm md:text-lg font-bold mb-1 text-green-500">Program Bahasa Arab</h3>
+                    <p class="text-gray-700 text-xs md:text-sm">Belajar Bahasa Arab dengan metode interaktif untuk memperdalam pemahaman bahasa Al-Quran.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://via.placeholder.com/300x200?text=Program+Praktek+Ibadah" alt="Program Praktek Ibadah" class="w-full h-32 object-cover md:h-40">
+                <div class="p-3 md:p-4">
+                    <h3 class="text-sm md:text-lg font-bold mb-1 text-green-500">Program Praktek Ibadah</h3>
+                    <p class="text-gray-700 text-xs md:text-sm">Melatih siswa dalam praktek ibadah sehari-hari seperti shalat, wudhu, dan doa.</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://via.placeholder.com/300x200?text=Program+Ekstrakurikuler" alt="Program Kegiatan Ekstrakurikuler" class="w-full h-32 object-cover md:h-40">
+                <div class="p-3 md:p-4">
+                    <h3 class="text-sm md:text-lg font-bold mb-1 text-green-500">Program Kegiatan Ekstrakurikuler</h3>
+                    <p class="text-gray-700 text-xs md:text-sm">Menawarkan berbagai kegiatan ekstrakurikuler yang mendukung minat dan bakat siswa.</p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://via.placeholder.com/300x200?text=Program+Kewirausahaan" alt="Program Kewirausahaan" class="w-full h-32 object-cover md:h-40">
+                <div class="p-3 md:p-4">
+                    <h3 class="text-sm md:text-lg font-bold mb-1 text-green-500">Program Kewirausahaan</h3>
+                    <p class="text-gray-700 text-xs md:text-sm">Membekali siswa dengan keterampilan wirausaha sejak dini untuk menjadi generasi mandiri.</p>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://via.placeholder.com/300x200?text=Program+Pendidikan+Karakter" alt="Program Pendidikan Karakter" class="w-full h-32 object-cover md:h-40">
+                <div class="p-3 md:p-4">
+                    <h3 class="text-sm md:text-lg font-bold mb-1 text-green-500">Program Pendidikan Karakter</h3>
+                    <p class="text-gray-700 text-xs md:text-sm">Menanamkan nilai-nilai karakter Islami seperti disiplin, tanggung jawab, dan kejujuran.</p>
+                </div>
+            </div>
+            
+            <!-- Tombol Selengkapnya -->
+            <div class="col-span-2 md:col-span-3 flex justify-center md:mt-4 mt-2">
+                <a href="#more-programs" class="bg-green-500 text-white py-2 px-4 rounded-full text-sm md:text-base hover:bg-green-600 transition">Selengkapnya</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CSS untuk tata letak dan styling card -->
+<style>
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    h2 {
+        font-size: 1.25rem; /* Untuk layar kecil */
+    }
+
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di layar kecil */
+    }
+
+    @media (min-width: 768px) {
+        h2 {
+            font-size: 1.875rem; /* Heading lebih besar di layar medium ke atas */
+        }
+
+        .card img {
+            height: 10rem; /* Gambar lebih tinggi di layar tablet ke atas */
+        }
+
+        .grid-cols-2 {
+            grid-template-columns: repeat(3, 1fr); /* 3 kolom di layar tablet ke atas */
+        }
+    }
+</style>
+<section class="py-8">
+    <div class="container mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-green-500">Program Ekstrakurikuler</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <!-- Card 1 -->
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://via.placeholder.com/300x200?text=Futsal" alt="Program Futsal" class="w-full h-32 object-cover md:h-40">
+                <div class="p-3 md:p-4">
+                    <h3 class="text-sm md:text-lg font-bold mb-1 text-green-500">Program Futsal</h3>
+                    <p class="text-gray-700 text-xs md:text-sm">Mengembangkan keterampilan fisik dan kerja sama tim melalui olahraga futsal.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://via.placeholder.com/300x200?text=Robotik" alt="Program Robotik" class="w-full h-32 object-cover md:h-40">
+                <div class="p-3 md:p-4">
+                    <h3 class="text-sm md:text-lg font-bold mb-1 text-green-500">Program Robotik</h3>
+                    <p class="text-gray-700 text-xs md:text-sm">Mengajarkan siswa tentang teknologi dan inovasi melalui pembuatan robot.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://via.placeholder.com/300x200?text=Pramuka" alt="Program Pramuka" class="w-full h-32 object-cover md:h-40">
+                <div class="p-3 md:p-4">
+                    <h3 class="text-sm md:text-lg font-bold mb-1 text-green-500">Program Pramuka</h3>
+                    <p class="text-gray-700 text-xs md:text-sm">Membentuk karakter, kemandirian, dan keterampilan hidup melalui kegiatan Pramuka.</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://via.placeholder.com/300x200?text=Kesenian" alt="Program Kesenian" class="w-full h-32 object-cover md:h-40">
+                <div class="p-3 md:p-4">
+                    <h3 class="text-sm md:text-lg font-bold mb-1 text-green-500">Program Kesenian</h3>
+                    <p class="text-gray-700 text-xs md:text-sm">Mengasah kreativitas dan seni melalui berbagai aktivitas seperti melukis, musik, dan tari.</p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://via.placeholder.com/300x200?text=Memasak" alt="Program Memasak" class="w-full h-32 object-cover md:h-40">
+                <div class="p-3 md:p-4">
+                    <h3 class="text-sm md:text-lg font-bold mb-1 text-green-500">Program Memasak</h3>
+                    <p class="text-gray-700 text-xs md:text-sm">Mengajarkan keterampilan memasak untuk memupuk kreativitas dan kemandirian di dapur.</p>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://via.placeholder.com/300x200?text=Musik" alt="Program Musik" class="w-full h-32 object-cover md:h-40">
+                <div class="p-3 md:p-4">
+                    <h3 class="text-sm md:text-lg font-bold mb-1 text-green-500">Program Musik</h3>
+                    <p class="text-gray-700 text-xs md:text-sm">Belajar bermain alat musik dan bernyanyi untuk mengembangkan bakat seni musik.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="video-map-section mb-10">
+    <div class="container mx-auto px-4 mb-10">
+        <h2 class="text-3xl font-bold text-center mb-6">Video Sekolah & Lokasi</h2>
+        
+        <!-- Video Section -->
+        <div class="video-container mb-8">
+            <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID"
+                class="w-full h-64 md:h-80 lg:h-96"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            ></iframe>
+            <div class="p-4 text-center">
+                <h3 class="font-semibold text-lg">Kenali Sekolah Kami</h3>
+                <p class="text-gray-600">Lihat video untuk mengetahui lebih lanjut tentang sekolah kami, fasilitas, dan kegiatan yang kami tawarkan.</p>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="map-container mb-8">
+            <h3 class="font-semibold text-lg text-center mb-4">Lokasi Sekolah Kami</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_LINK"
+                class="w-full h-64 md:h-80 lg:h-96"
+                frameborder="0"
+                allowfullscreen
+            ></iframe>
+            <div class="p-4 text-center">
+                <p class="text-gray-600">Kami terletak di lokasi strategis, mudah dijangkau dari berbagai arah. Kunjungi kami untuk mendapatkan informasi lebih lanjut.</p>
+            </div>
+        </div>
+
+        <!-- Call to Action Section -->
+        <div class="cta-section text-center">
+            <h3 class="text-2xl font-bold mb-4">Bergabunglah Bersama Kami!</h3>
+            <p class="mb-4">Daftar sekarang dan jadilah bagian dari komunitas belajar yang inspiratif dan menyenangkan!</p>
+            <a href="#daftar" class="btn-primary">Daftar Sekarang</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .video-map-section {
+        background-color: #f9fafb; /* Warna latar belakang */
+    }
+
+    .video-container,
+    .map-container {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-primary {
+        background-color: #4CAF50; /* Warna tombol */
+        color: white; /* Warna teks */
+        padding: 12px 20px; /* Padding tombol */
+        border: none;
+        border-radius: 5px; /* Sudut melengkung */
+        transition: background-color 0.3s ease; /* Transisi warna */
+        font-size: 16px; /* Ukuran font */
+        text-decoration: none; /* Menghilangkan garis bawah */
+        display: inline-block; /* Agar tombol terformat dengan baik */
+    }
+
+    .btn-primary:hover {
+        background-color: #45a049; /* Warna saat hover */
+    }
+</style>
+
+
+@endsection
